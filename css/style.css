@@ -1,0 +1,383 @@
+/* Start Global Rules =============================== */
+body 
+{ 
+   
+    background: linear-gradient(to top right ,rgb(27 20 41),rgb(20 15 35));
+    background-attachment: fixed; 
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: 'Raleway', sans-serif ;
+}
+:root
+{
+    --image-gradient: linear-gradient(to bottom left,rgba(17,16,16,0.678),rgba(12,10,22,0.863));
+}
+.color-text
+{
+    color: #cd5ff8;
+}
+.spinner {
+    width: 40px;
+    height: 40px;
+    background-color: #FFF;
+  
+    margin: 100px auto;
+    -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+    animation: sk-rotateplane 1.2s infinite ease-in-out;
+  }
+  
+  @-webkit-keyframes sk-rotateplane {
+    0% { -webkit-transform: perspective(120px) }
+    50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+    100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+  }
+  
+  @keyframes sk-rotateplane {
+    0% { 
+      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+      -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+    } 50% { 
+      transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+      -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+    } 100% { 
+      transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+      -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    }
+  }    
+.loading 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #0a0416;
+    z-index: 99999999999999999999999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}  
+/* End Global Rules =============================== */
+/* Start Section navigation ======================= */
+.navigation
+{
+    background-image: var(--image-gradient),url(../images/home-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+}
+.navbar-brand 
+{
+    color: #FFFFFF ;
+    text-transform: capitalize;
+    font-style: italic;
+    font-size: 30px !important;
+}
+.navbar-brand:hover, .navbar-brand:focus {
+    color: #FFFFFF ;
+}
+ .nav-link
+{
+    text-transform: capitalize;
+    color: #FFFFFF !important;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+    margin-left: 20px;
+}
+.navbar-toggler-icon 
+{
+    background-color: #cd5ff8;
+    border: 2px solid #FFF;
+    padding:15px 20px;
+}
+.navbar-toggler {
+    color: #fff;
+    border: #fff;
+}
+
+.fork-btn 
+{
+    background-color: rgba(147,76,206,0.37);
+    padding: 4px 25px !important;
+    border-radius: 6px;
+    font-size: 14px !important;
+    margin-top: 5px;
+    
+}
+@media screen and (min-width:991px) {
+    .nav-link::after
+{
+    content: "";
+    position: relative;
+    display: block;
+    height: 5px;
+    width: 0;
+    border-radius: 16px;
+    background: #c95bf5;
+    z-index: -1;
+    transition: all .3s ease-out 0s;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+}
+/* End Section navigation =========================*/
+/* Start Section Home =========================*/
+.Home .main-name
+{
+    color: #cd5ff8 !important;
+    text-transform: capitalize;
+}
+.heading 
+{
+    font-size: 50px;
+}
+.wave {
+    animation-name: wave-animation; 
+    animation-duration: 2.1s; 
+    animation-iteration-count: infinite; 
+    transform-origin: 70% 70%; 
+    display: inline-block;
+  }
+@keyframes wave-animation {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    } 
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+ .typewriter
+ {
+    position: relative;
+ }
+ .typewriter::after
+{
+     position: absolute;
+    content: " | ";
+    animation: slider 10s infinite ;
+    -webkit-animation: typewriter-animation 6s infinite ; 
+    font-size: 2.2em;
+    color : #be6adf ;
+    font-weight: 600;
+}
+
+@keyframes typewriter-animation {
+    0% {content: "D";}
+    5% {content: "De";}
+    9% {content: "Dev";}
+    14% {content: "Deve";}
+    18% {content: "Devel";}
+    22% {content: "Develo";}
+    26% {content: "Develop";}
+    28% {content: "Develope";}
+    33% {content: "Developer";}
+    37%{content: "F";}
+    40%{content: "Fr";}
+    44%{content: "Fro";}
+    48%{content: "Fron";}
+    53%{content: "Front";}
+    57%{content: "Fronte";}
+    61%{content: "Fronte";}
+    64%{content: "Fronten";} 
+    67%{content: "Frontend";} 
+    72%{content: "Fronten D";} 
+    75%{content: "Fronten De";} 
+    79%{content: "Fronten Dev";} 
+    83%{content: "Fronten Deve";} 
+    86%{content: "Fronten Devel";} 
+    89%{content: "Fronten Develo";}
+    93%{content: "Fronten Develop";}
+    96%{content: "Fronten Develope";}
+    100%{content: "Fronten Developer";}
+
+}  
+
+
+/* End Section Home =========================*/
+/* Start Section About-section ============= */
+.About-section 
+{
+    margin-top: 100px ;
+
+}
+.About-section  strong 
+{
+    font-style: italic;
+}
+.About-section p 
+{
+    font-size: 1.2em
+}
+
+.home-about-social .icon-colour
+
+{
+  color: #c95bf5;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 2em;
+  background: hsla(0,0%,100%,.972);
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+/* End Section About-section =============== */
+footer {
+    background-color: #0a0416;
+    padding: 15px 0;
+}
+ strong 
+{
+    color: #c95bf5;
+    text-transform: capitalize;
+}
+/* Start Section About ==========================  */
+.About
+{
+    padding: 100px 0;
+   
+}
+.About p 
+{
+    color: #FFF;
+    font-weight: 600;
+    font-size: 20px;
+}
+.About blockquote 
+{
+    color: rgb(155, 126, 172); 
+    text-align: center;
+    font-weight: 600;
+}
+/* End Section About ==========================  */
+
+.tech-icons {
+    font-size: 4.5em;
+    margin: 15px;
+    padding: 10px;
+    border: 1.7px solid rgba(200,137,230,.637);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 4px 5px 4px 3px rgba(89,4,168,.137);
+    overflow: hidden;
+    transition: all .4s ease 0s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-transition: all .4s ease 0s;
+    -moz-transition: all .4s ease 0s;
+    -ms-transition: all .4s ease 0s;
+    -o-transition: all .4s ease 0s;
+ 
+}
+.tech-icons:hover 
+{
+    transform: scale(1.05);
+    overflow: hidden;
+    border: 2.2px solid rgba(197,115,230,.883);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+.main-bg 
+{
+    background: url(../images/download\ \(1\).png);
+    background-size: cover ;
+    background-position: 100% 100%;
+}
+.project-card
+{
+    box-shadow: 0 4px 5px 3px rgba(119,53,136,.459);
+    color: #fff;
+    background-color: transparent;
+    opacity: .9;
+    height: 100%;
+
+}
+
+.part-1 
+{
+    background-image: url(../images/part\ \(1\).png);
+}
+.part-2
+{
+  background-image: url(../images/part\(2\).png);
+}
+.part-3
+{
+  background-image: url(../images/part\(3\).png);
+}
+.part-4
+{
+  background-image: url(../images/part\(5\).png);
+}
+.part-5
+{
+  background-image: url(../images/part\(4\).png);
+}
+.part-6
+{
+  background-image: url(../images/product.png);
+}
+.part-7
+{
+  background-image: url(../images/curd.jpg);
+}
+ .pic:hover {
+    background-position-y: 100%;
+}
+ .pic {
+    height: 390px;
+    position: relative;
+    background-size: cover;
+    background-position-y: 0;
+    width: 100%;
+    -webkit-transition: all 4s ease-in-out;
+    transition: all 4s ease-in-out;
+}
+ .box-content {
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    height: 390px;
+    z-index: 1000;
+    width: 100%;
+    position: absolute;
+}
